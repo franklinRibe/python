@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
     # Ler o arquivo Scilista
 
-    fp = open('/Users/franklin.ribeiro/Documents/Python/valida-proc/aulas-python/check_scielo_web/scilista.lst', 'r')
+    fp = open("./valida-proc/aulas-python/check_scielo_web/scilista.lst", 'r')
 
     for line in fp.readlines():
         acron, issue_label = line.split()
