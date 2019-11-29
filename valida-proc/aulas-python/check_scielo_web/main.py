@@ -39,4 +39,4 @@ if __name__ == "__main__":
         if ret.status_code == 200:
             issn = re.search(REGEX_ISSN, ret.url)
             print(issn.group())
-    
+    print("teste")
