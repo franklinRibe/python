@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 # coding: utf-8
 
+
+
+
 import requests
 from lxml import html
 import re
-
+import pdb
 """
 O que iremos fazer?
 
@@ -48,11 +51,8 @@ if __name__ == "__main__":
     for issn in issns:
         url_segment = URL_SEGMENT % (SCRIPT_URL['grid'], issn)
         ret = requests.get("%s%s/%s" % (PROTOCOL, DOMAIN, url_segment))
-
         tree = html.fromstring(ret.content)
+        #  table = tree.xpath('//span[@class="content"]/text()')
         table = tree.xpath('//table')[3]
-        print("Conteúdo da tablela fasciculo: %s \n" % table.text_content)
-        
-
-
-    print("teste")
+        #  print("Conteúdo da tablela fasciculo: %s \n" % table.text_content)
+        pdb.set_trace()
